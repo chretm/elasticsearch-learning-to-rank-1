@@ -1,0 +1,82 @@
+# grade (0-4)	queryid	docId	title
+# 
+# Add your keyword strings below, the feature script will 
+# Use them to populate your query templates 
+# 
+# qid:1: artificial intelligence
+# qid:2: analysis
+# qid:3: physicist
+# qid:4: mathematician
+# qid:5: data
+# qid:6: Science and emotion
+# qid:7: carpenter wood
+# 
+# https://sourceforge.net/p/lemur/wiki/RankLib%20File%20Format/
+# 
+# 
+4 qid:1 # 644 A.I. Artificial Intelligence
+4 qid:1 # 2102 Solar Crisis
+4 qid:1 # 18775 Demon Seed
+4 qid:1 # 10048 Stealth
+2 qid:1 # 26957 Puppet Master 4
+3 qid:1 # 14573 Natural City
+3 qid:1 # 22379 Slipstream
+1 qid:1 # 54973 Dopamine
+4 qid:1 # 264660 Ex Machina
+3 qid:1 # 158743 Computer Chess
+4 qid:2 # 112823 Numéro deux
+4 qid:2 # 391166 Paying the Price: Killing the Children of Iraq
+4 qid:2 # 42314 Looking For Richard
+1 qid:2 # 9573 Blood Work
+4 qid:2 # 60308 Moneyball
+1 qid:2 # 154795 One Nation Under God
+2 qid:2 # 192145 Third Person
+0 qid:2 # 64074 Two in the Wave
+3 qid:2 # 135800 No Logo: Taking Aim at the Brand Bullies
+4 qid:3 # 2033 Infinity
+2 qid:3 # 56320 The Scientist
+4 qid:3 # 11777 I.Q.
+4 qid:3 # 15044 Einstein and Eddington
+0 qid:3 # 13448 Angels & Demons
+2 qid:3 # 3593 Dr. Cyclops
+1 qid:3 # 347945 Synchronicity
+1 qid:3 # 16850 The Heroes of Telemark
+1 qid:3 # 124905 Godzilla
+0 qid:3 # 16180 The Legend of Hell House
+4 qid:4 # 49634 Blaise Pascal
+2 qid:4 # 15486 The Bank
+3 qid:4 # 9777 Proof
+1 qid:4 # 470 21 Grams
+4 qid:4 # 88276 Zorns Lemma
+4 qid:4 # 80787 Codebreaker
+4 qid:4 # 453 A Beautiful Mind
+4 qid:5 # 9886 Johnny Mnemonic
+1 qid:5 # 104710 Catastroika
+0 qid:5 # 9340 The Goonies
+3 qid:5 # 320849 Ice Age Columbus: Who Were the First Americans?
+2 qid:5 # 281 Strange Days
+0 qid:5 # 137876 The Reckoning
+1 qid:5 # 3075 Frankenstein Must Be Destroyed
+4 qid:5 # 16248 D.A.R.Y.L.
+1 qid:5 # 306963 Wanderers
+2 qid:5 # 64071 Tobor the Great
+0 qid:6 # 124517 Emotion
+4 qid:6 # 11814 Weird Science
+2 qid:6 # 13068 Rocket Science
+4 qid:6 # 7299 Equilibrium
+0 qid:6 # 24653 The Consequences of Love
+3 qid:6 # 10416 What Planet Are You From?
+4 qid:6 # 25183 Paper Heart
+0 qid:6 # 775 A Trip to the Moon
+0 qid:6 # 18252 My Science Project
+4 qid:6 # 261246 Century
+0 qid:7 # 69898 The Karen Carpenter Story
+3 qid:7 # 82020 The Carpenter
+0 qid:7 # 81310 Winnie the Pooh and the Blustery Day
+0 qid:7 # 522 Ed Wood
+0 qid:7 # 16158 The Wood
+0 qid:7 # 57703 Norwegian Wood
+0 qid:7 # 59726 Wake Wood
+0 qid:7 # 1387 Superstar: The Karen Carpenter Story
+2 qid:7 # 374473 I, Daniel Blake
+0 qid:7 # 47615 Orgy of the Dead
