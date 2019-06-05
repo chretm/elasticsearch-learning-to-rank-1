@@ -44,7 +44,7 @@ angular.module('app', ['components'])
 
         $scope.items = []
         response.data.forEach(element => {
-          $scope.items.push({ 'query': $scope.q, 'query_id': $scope.label_index, 'name': element.name, 'id': element.id, 'rating': -1 })
+          $scope.items.push({ 'query': $scope.q, 'query_id': $scope.label_index, 'name': element.name, 'description':element.description, 'genres':element.genres, 'id': element.id, 'rating': -1 })
         });
 
       }, function errorCallback(response) {

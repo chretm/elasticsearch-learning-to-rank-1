@@ -29,9 +29,12 @@ class Labeller:
             index=ES_INDEX, body=search_query)
 
         res = []
+        #chretm 2019-06-05 : we added overview, list of genres in order to display in the labeller interface
         for result in results['hits']['hits']:
             res.append({'name': result['_source']
-                        ['title'], 'id': result['_id']})
+                        ['title'], 'description': result['_source']
+                        ['overview'], 'genres': ",".join(genre['name'] for genre in result['_source']
+                        ['genres']), 'id': result['_id']})
 
         return json.dumps(res)
 

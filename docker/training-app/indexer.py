@@ -44,7 +44,7 @@ class Indexer:
                           "_source": movie}
                 yield addCmd
                 if 'title' in movie:
-                    print("%s added to %s" % (movie, index),file=sys.stderr)
+                    print("%s added to %s" % (movie['title'], index),file=sys.stderr)
 
     def __reindex(self, es, analysisSettings={}, mappingSettings={}, movieDict={}, index='tmdb', es_type='movie'):
         import elasticsearch.helpers

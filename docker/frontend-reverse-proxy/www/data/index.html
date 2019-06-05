@@ -55,12 +55,16 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Genres</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr ng-repeat="item in items">
                     <th scope="row">{{item.id}}</th>
                     <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.genres}}</td>
                     <td><input type="radio" ng-model="item.rating" value="0">0</td>
                     <td><input type="radio" ng-model="item.rating" value="1">1</td>
                     <td><input type="radio" ng-model="item.rating" value="2">2</td>
