@@ -26,7 +26,7 @@ class Labeller:
         es = Elasticsearch()
         search_query["query"]["multi_match"]["query"] = query
         results = es.search(
-            index=ES_INDEX, doc_type=ES_TYPE, body=search_query)
+            index=ES_INDEX, body=search_query)
 
         res = []
         for result in results['hits']['hits']:

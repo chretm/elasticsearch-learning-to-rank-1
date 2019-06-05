@@ -10,7 +10,7 @@ class Tester:
         self.__es = es
 
     def test(self, query):
-        results = self.__es.search(index=ES_INDEX, doc_type=ES_TYPE, body=self.ltrQuery(query, ES_MODEL_NAME))
+        results = self.__es.search(index=ES_INDEX, body=self.ltrQuery(query, ES_MODEL_NAME))
         res = []
         for result in results['hits']['hits']:
             res.append({'name': result['_source']

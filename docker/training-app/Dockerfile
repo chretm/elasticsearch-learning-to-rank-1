@@ -7,6 +7,7 @@ RUN mkdir -p /opt/services/flaskapp/src
 COPY . /opt/services/flaskapp/src
 WORKDIR /opt/services/flaskapp/src
 RUN pip install -r requirements.txt
+RUN pip install --upgrade elasticsearch
 RUN python /opt/services/flaskapp/src/prepare.py
 EXPOSE 5090
 CMD ["python", "-u", "app.py"]
