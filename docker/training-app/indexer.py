@@ -1,5 +1,6 @@
 import json
 import time
+import datetime
 import sys
 from utils import Elasticsearch, ES_INDEX, ES_TYPE, ES_DATA
 
@@ -34,9 +35,19 @@ class Indexer:
             dictfilt = lambda x, y: dict([ (i,x[i]) for i in x if i in set(y) ])  #This function takes x as dict and keeps keys in y
             for id, movie in movieDict.items():
                 movie = dictfilt(movie, to_keep)
-                if 'release_date' in movie and movie['release_date'] == "":
-                    del movie['release_date']
-                #chretm : we 
+                #chretm 2019-05-06 : we create new field, that are : number of genres, lenght of overview, 
+                #number of spoken language, and finally the realesed number over days until now
+                movie['genres_count'] = len(movie['genres'])
+                movie['overview_size'] = len(movie['overview'])
+                movie['language_count'] = len(movie['spoken_languages'])
+                if 'release_date' in movie :
+                    if movie['release_date'] == "":
+                        del movie['release_date']
+                    else:
+                        a=movie['release_date']
+                        movie['released_days'] = (datetime.date.today()-(datetime.date(int(a.split('-')[0]),int(a.split('-')[1]),int(a.split('-')[2])))).days
+                       
+                print(movie)
                 self.__enrich(movie)
                 addCmd = {"_index": index,
                           "_type": es_type,
