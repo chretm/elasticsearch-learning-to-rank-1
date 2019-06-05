@@ -1,8 +1,13 @@
 {
     "query": {
-        "prefix": {
-            "overview": "{{keywords}}"
+        "function_score": {
+        
+            "functions": [
+                {"field_value_factor": {
+                    "field": "popularity",
+                    "missing": -1   
+                }}
+            ]
         }
     }
 }
-

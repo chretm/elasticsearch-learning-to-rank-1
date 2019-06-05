@@ -12,7 +12,7 @@ ES_INDEX = os.environ.get('ES_INDEX', 'tmdb')
 ES_TYPE = os.environ.get('ES_TYPE', 'movie')
 ES_DATA = os.environ.get('ES_DATA', '/opt/services/flaskapp/tmdb.json')
 ES_FEATURE_SET_NAME = os.environ.get('ES_FEATURE_SET_NAME', 'movie_features')
-ES_MODEL_NAME = os.environ.get('ES_MODEL_NAME', 'test_6')
+ES_MODEL_NAME = os.environ.get('ES_MODEL_NAME', 'test')
 ES_MODEL_TYPE = os.environ.get('ES_MODEL_TYPE', '6')
 ES_METRIC_TYPE = os.environ.get('ES_METRIC_TYPE', 'ERR@10')
 

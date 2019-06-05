@@ -23,7 +23,7 @@ class Tester:
           "query": {
               "multi_match": {
                   "query": "test",
-                  "fields": ["title", "overview"]
+                  "fields": ["overview", "genres"]
                }
            },
           "rescore": {
@@ -41,6 +41,7 @@ class Tester:
         }
 
         baseQuery['rescore']['query']['rescore_query']['sltr']['model'] = modelName
+        print(modelName)
         baseQuery['query']['multi_match']['query'] = keywords
         baseQuery['rescore']['query']['rescore_query']['sltr']['params']['keywords'] = keywords
         print("%s" % json.dumps(baseQuery),file=sys.stderr)
