@@ -14,7 +14,7 @@ class Tester:
         res = []
         for result in results['hits']['hits']:
             res.append({'name': result['_source']
-                        ['title'], 'id': result['_id'], 'score': result['_score']})
+                        ['title'], 'description':result['_source']['overview'], 'id': result['_id'], 'score': result['_score']})
 
         return json.dumps(res)
 
@@ -23,7 +23,8 @@ class Tester:
           "query": {
               "multi_match": {
                   "query": "test",
-                  "fields": ["overview", "genres"]
+                  "fields": ["overview"],
+                  "fuzziness":2
                }
            },
           "rescore": {
@@ -41,7 +42,7 @@ class Tester:
         }
 
         baseQuery['rescore']['query']['rescore_query']['sltr']['model'] = modelName
-        print(modelName)
+
         baseQuery['query']['multi_match']['query'] = keywords
         baseQuery['rescore']['query']['rescore_query']['sltr']['params']['keywords'] = keywords
         print("%s" % json.dumps(baseQuery),file=sys.stderr)

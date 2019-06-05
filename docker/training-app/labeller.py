@@ -18,7 +18,8 @@ class Labeller:
             "query": {
                 "multi_match": {
                     "query": "test",
-                    "fields": ["title", "overview"]
+                    "fields": ["title", "overview"],
+                    "fuzziness":2
                 }
             }
         }

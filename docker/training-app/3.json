@@ -1,13 +1,11 @@
 {
     "query": {
         "function_score": {
-        
-            "functions": [
-                {"field_value_factor": {
-                    "field": "popularity",
-                    "missing": -1   
-                }}
-            ]
+            "script_score" : {
+                "script" : {
+                  "source": "Math.log(1 + doc['vote_average'].value * doc['vote_count'].value)"
+                }
+            }
         }
     }
 }
